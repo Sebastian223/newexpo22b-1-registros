@@ -1,0 +1,14 @@
+Presentación Registros:
+Los registros son la memoria más cercana a un procesador que existe y por tanto la más rápida en cuanto a velocidad de acceso. Se trata de memorias muy pequeñas a las que la unidad de control y la de ejecución tienen acceso directo para realizar ciertas funciones concretas.
+Los registros más comunes en una CPU independientemente de su ISA son:
+Para los cálculos aritméticos ejecutados en la ALU se utilizan los registros del tipo acumulador, cada set de registros e instrucciones tiene una cantidad diferente de registros del tipo acumulador.
+Los registros de acceso a la memoria se dividen en dos tipos. Por un lado, unos registros contienen la dirección de memoria donde se encuentran los datos. Por el otro los datos que se han de escribir o los que se han de leer.
+Los registros de propósito general no tienen una utilidad concreta y especifica, se utilizan en algunas arquitecturas para poder acceder a ellos con la menor latencia posible.
+El contador de programa en un registro que indica la dirección de memoria de la siguiente instrucción a ejecutar. Las instrucciones de salto las modifican cuando no se quiere acceder a la siguiente instrucción sino a otra parte del programa. En cada ciclo de instrucción completo se incrementa la dirección de memoria en 1 y este asociado al bus de direcciones del procesador.
+
+Todos los registros en el procesador ARM Cortex-A9 tienen 32 bits de largo. Hay 15 registros de propósito general, R0 a R14, un contador de programa, R15, y un estado actual de programa de registro, CPSR. Todos los registros de propósito general pueden ser usado en la misma vía. Sin embargo, programas de software suelen tratar dos de ellos de manera especial. El registro R13 se utiliza como un puntero Stack. El registro R14 se utiliza como un registro de enlace en enlace de subrutinas. En programas de lenguaje de ensamblador, los registros R15, R14 y R13 también pueden ser referidos a la PC mediante el uso de acrónimos, LR y SP, respectivamente. En los programas en lenguaje ensamblador, los nombres de los registros pueden ser escritos ya sea en mayúsculas o minúscula. Así, R1, R2, PC, LR Y SP es equivalente a r1, r2, PC,lr y sp.
+https://sites.google.com/site/de0nanosoc/home/arm-introduction
+posible información buena:
+https://www.mikroe.com/ebooks/microcontroladores-pic-programacion-en-c-con-ejemplos/principales-registros-sfr
+https://www.youtube.com/watch?v=m3A-5LKi44ghttps://www.youtube.com/watch?v=m3A-5LKi44g
+
